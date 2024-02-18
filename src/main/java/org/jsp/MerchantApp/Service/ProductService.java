@@ -25,6 +25,7 @@ public class ProductService {
 
 	public ResponseEntity<ResponseStructure<Product>> saveProduct(Product product, int merchant_id) {
 		Optional<Merchant> recMerchant = merchantDao.findById(merchant_id);
+		
 		ResponseStructure<Product> structure = new ResponseStructure<>();
 		if (recMerchant.isPresent()) {
 			Merchant merchant = recMerchant.get();

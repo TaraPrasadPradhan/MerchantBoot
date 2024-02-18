@@ -1,5 +1,4 @@
 package org.jsp.MerchantApp.Controller;
-
 import java.util.List;
 
 import org.jsp.MerchantApp.Dto.Product;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/products")
+
 public class ProductController {
 	@Autowired
 	private ProductService productService;
@@ -54,7 +54,7 @@ public class ProductController {
 			@PathVariable(name = "merchant_id") int merchant_id) {
 		return productService.findByMerchantId(merchant_id);
 	}
-    
+
 	@PostMapping("/by-merchant")
 	public ResponseEntity<ResponseStructure<List<Product>>> findByMerchant(@RequestParam long phone,
 			@RequestParam String password) {

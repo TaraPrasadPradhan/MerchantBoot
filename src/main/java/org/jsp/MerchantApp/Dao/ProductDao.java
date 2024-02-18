@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 public class ProductDao {
 	
 	@Autowired
-	
 	private ProductRepository productRepository;
 	
 	public Product saveProduct(Product product) {
